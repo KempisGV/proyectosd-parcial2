@@ -43,7 +43,7 @@ public class Productor {
 			fr.close();    //closes the stream and release the resources  
 			
 			
-			System.out.println("Fueron ingresadas " + contadorDeLineas + " tareas en la cola de trabajo, correspondiente a " + contadorDeLineas + "lineas del archivo.");
+			System.out.println("Fueron ingresadas " + contadorDeLineas + " tareas en la cola de trabajo, correspondiente a " + contadorDeLineas + " lineas del archivo.");
 			}  
 			catch(IOException e)  
 			{  

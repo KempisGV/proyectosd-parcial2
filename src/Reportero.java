@@ -10,6 +10,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,6 +24,7 @@ public class Reportero {
 		DataInputStream in;
 		DataOutputStream out;
 		int contador = 0;
+		ArrayList<Long> tiempo = new ArrayList<Long>();
 		
 		final int PUERTO = 5000;
 		
@@ -31,15 +33,18 @@ public class Reportero {
 			 servidor = new ServerSocket(PUERTO);
 			 System.out.println("Reportero iniciado.");
 			 
-			 long startTime = System.nanoTime();
+			 long startTime = 0;
 			 
 			 while(true) {
 				 
 				 sc = servidor.accept();
 				 //Cliente conectado
 				 
+				 startTime = System.nanoTime();
+				 tiempo.add(startTime);
+				 
 				 long endTime = System.nanoTime();
-				 long duration = (endTime - startTime);
+				 long duration = (endTime - tiempo.get(0));
 				 long convert = TimeUnit.SECONDS.convert(duration, TimeUnit.NANOSECONDS);
 				 System.out.println("Tiempo final: " + convert + " segundos");
 				 
@@ -53,7 +58,7 @@ public class Reportero {
 				 out.writeUTF("Hola desde el reportero.");
 				 
 				 contador++;
-				 System.out.println("Cantidad de datos recibida: " + contador + "\n");
+				 System.out.println("Cantidad de datos recibidos: " + contador + "\n");
 				 
 				 
 				 
@@ -61,7 +66,8 @@ public class Reportero {
 				 //Cliente desconectado
 			 }
 			 			 
-		 }catch (IOException ex) {
+		 }
+		 catch (IOException ex) {
              Logger.getLogger(Reportero.class.getName()).log(Level.SEVERE, null, ex);
          }
 		 }
