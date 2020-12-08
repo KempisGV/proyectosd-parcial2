@@ -19,7 +19,8 @@
 2. Instalar el jdk de java utilizando el comando `sudo apt install default-jdk`.
 3. Asegurarse de tener correctamente instalado RabbitMQ.
 4. Para comprobar que java está instalado ejecutar el comando `javac`.
-5. 
+5. Una vez ubicados en la carpeta del proyecto en la máquina virtual que hará de productor y consumidor nos movemos a la carpeta src y se necesita agregar al classpath las siguientes librerias: amqp-client-5.7.1.jar, slf4j-api-1.7.26.jar, slf4j-simple-1.7.26.jar para esto se utilizará los siguientes comandos: `export CLASSPATH=amqp-client-5.7.1.jar:$CLASSPATH`, `export CLASSPATH=slf4j-api-1.7.26.jar:$CLASSPATH`, `export CLASSPATH=slf4j-simple-1.7.26.jar:$CLASSPATH`
+6. Luego procedemos a compilar en ambas maquinas los modulos correspondientes para ello ejecutamos el comando `javac *.java`y `javac Reportero.java`, luego de verificar que se compilo correctamente ejecutamos el comando `java Productor`,  `java Consumidor` Y `java Reportero`.
 
 
 
