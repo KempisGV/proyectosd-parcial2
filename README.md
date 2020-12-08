@@ -1,5 +1,5 @@
 proyectosd-parcial2
-#Instrucciones para instalar RabbitMQ en Ubuntu 
+# Instrucciones para instalar RabbitMQ en Ubuntu 
 1. En el cmd se ingresann los siguientes comandos para actualizar el sistema: sudo apt-get update ,  sudo apt-get upgrade.
 2. Para instalar Erlang se necesita importar el repositorio de Erlang con el comando `wget -O- https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo apt-key add -`. Luego se añade Erlang a ubuntu con el comando `echo "deb https://packages.erlang-solutions.com/ubuntu focal contrib" | sudo tee /etc/apt/sources.list.d/rabbitmq.list`. Finalmente utilizamos `sudo apt install erlang` para instlar Erlang.
 3. Para verificar que se instaló correctamente Erlang utilice el comando `erl`
@@ -10,7 +10,7 @@ proyectosd-parcial2
 8. Finalmente chequeamos el estado del servidor con el comando `sudo rabbitmqctl status`
 
 
-#Instrucciones para compilar y ejecutar la aplicación en Ubuntu 
+# Instrucciones para compilar y ejecutar la aplicación en Ubuntu  
 1. 
 2. 
 
