@@ -1,4 +1,8 @@
-proyectosd-parcial2
+# proyectosd-parcial2
+# Integrantes:
+* Kempis Guerrero
+* Mathias Loor
+* David Torres
 # Instrucciones para instalar RabbitMQ en Ubuntu 
 1. En el cmd se ingresann los siguientes comandos para actualizar el sistema: sudo apt-get update ,  sudo apt-get upgrade.
 2. Para instalar Erlang se necesita importar el repositorio de Erlang con el comando `wget -O- https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo apt-key add -`. Luego se añade Erlang a ubuntu con el comando `echo "deb https://packages.erlang-solutions.com/ubuntu focal contrib" | sudo tee /etc/apt/sources.list.d/rabbitmq.list`. Finalmente utilizamos `sudo apt install erlang` para instlar Erlang.
@@ -11,9 +15,11 @@ proyectosd-parcial2
 
 
 # Instrucciones para compilar y ejecutar la aplicación en Ubuntu  
-1. 
-2. 
-
+1. Ejecutar el comando `sudo ifconfig enp0s8 10.10.10.X`(x es el numero del nodo) para configurar la red interna de la máquina virtual, la máquina que hará de productor y consumidor deberá tener la ip 10.10.10.1 y el reportero 10.10.10.2
+2. Instalar el jdk de java utilizando el comando `sudo apt install default-jdk`.
+3. Asegurarse de tener correctamente instalado RabbitMQ.
+4. Para comprobar que java está instalado ejecutar el comando `javac`.
+5. 
 
 
 
