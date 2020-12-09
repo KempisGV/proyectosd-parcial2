@@ -15,7 +15,7 @@
 
 
 # Instrucciones para compilar y ejecutar la aplicación en Ubuntu  
-1. Ejecutar el comando `sudo ifconfig enp0s8 10.10.10.X`(x es el numero del nodo) para configurar la red interna de la máquina virtual, la máquina que hará de productor y consumidor deberá tener la ip 10.10.10.1 y el reportero 10.10.10.2
+1. Ejecutar el comando `sudo ifconfig enp0s8 10.10.10.X`(x es el numero del nodo) para configurar la red interna de la máquina virtual, la máquina que haráel reportero deberá tener la ip 10.10.10.1 y la máquina que hará de productor y consumidor 10.10.10.2
 2. Instalar el jdk de java utilizando el comando `sudo apt install default-jdk`.
 3. Asegurarse de tener correctamente instalado RabbitMQ.
 4. Para comprobar que java está instalado ejecutar el comando `javac`.
