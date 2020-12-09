@@ -64,7 +64,7 @@ public class Consumidor {
 
 	public static void main(String[] args) throws IOException, TimeoutException {
 		
-		final String HOST = "127.0.0.1";
+		final String HOST = "10.0.0.1";
 		final int PUERTO = 5000;
 		
 		
@@ -90,7 +90,7 @@ try {
 			
 			out.writeUTF(encryptThisString(m));
 			
-			//Imprimir mensaje que envía el reportero
+			//Imprimir mensaje que envÃ­a el reportero
 			//System.out.println(in.readUTF());
 			
 			sc.close();
