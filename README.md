@@ -4,7 +4,7 @@
 * Mathias Loor
 * David Torres
 # Instrucciones para instalar RabbitMQ en Ubuntu 
-1. En la terminal se ingresann los siguientes comandos para actualizar el sistema: `sudo apt-get update` ,  `sudo apt-get upgrade`.
+1. En la terminal se ingresan los siguientes comandos para actualizar el sistema: `sudo apt-get update` ,  `sudo apt-get upgrade`.
 2. Para instalar Erlang se necesita importar el repositorio de Erlang con el comando `wget -O- https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo apt-key add -`. Luego se añade Erlang a ubuntu con el comando `echo deb https://packages.erlang-solutions.com/ubuntu focal contrib | sudo tee /etc/apt/sources.list.d/rabbitmq.list`. Finalmente utilizamos `sudo apt install erlang` para instlar Erlang.
 3. Para verificar que se instaló correctamente Erlang utilice el comando `erl`
 4. Luego de instalar Erlang procedemos a colocar el siguiente comando `echo deb https://dl.bintray.com/rabbitmq/debian xenial main | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list`
