@@ -64,7 +64,7 @@ public class Consumidor {
 
 	public static void main(String[] args) throws IOException, TimeoutException {
 		
-		final String HOST = "10.10.0.1";
+		final String HOST = "10.10.10.1";
 		final int PUERTO = 5000;
 		
 		
