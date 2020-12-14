@@ -4,6 +4,7 @@
 * Mathias Loor
 * David Torres
 # Instrucciones para instalar RabbitMQ en Ubuntu 
+Solo se necesita instalar en la máquina virtual en la que se ejecuta los consumidores y el productor 
 1. En la terminal se ingresan los siguientes comandos para actualizar el sistema: `sudo apt-get update` ,  `sudo apt-get upgrade`.
 2. Para instalar Erlang se necesita importar el repositorio de Erlang con el comando `wget -O- https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo apt-key add -`. Luego se añade Erlang a ubuntu con el comando `echo deb https://packages.erlang-solutions.com/ubuntu focal contrib | sudo tee /etc/apt/sources.list.d/rabbitmq.list`. Finalmente utilizamos `sudo apt install erlang` para instlar Erlang.
 3. Para verificar que se instaló correctamente Erlang utilice el comando `erl`
@@ -21,7 +22,8 @@
 4. Para comprobar que java está instalado ejecutar el comando `javac`.
 5. Una vez ubicados en la carpeta del proyecto en la máquina virtual que hará de productor y consumidor nos movemos a la carpeta src y se necesita agregar al classpath las siguientes librerias: amqp-client-5.7.1.jar, slf4j-api-1.7.26.jar, slf4j-simple-1.7.26.jar para esto se utilizará los siguientes comandos: `export CLASSPATH=amqp-client-5.7.1.jar:$CLASSPATH`, `export CLASSPATH=slf4j-api-1.7.26.jar:$CLASSPATH`, `export CLASSPATH=slf4j-simple-1.7.26.jar:$CLASSPATH`
 6. Luego procedemos a compilar en ambas maquinas los modulos correspondientes para ello ejecutamos el comando `javac *.java` en la máquina que hará de productor y consumidor y `javac Reportero.java` en la otra, luego de verificar que se compilo correctamente ejecutamos el comando `java Reportero` para iniciar el reportero. Para un correcto funcionamiento de los programas se tienen que ejecutar los consumidores que deseen usar antes del productor, se tiene que usar una terminal distinta para la ejecución de cada consumidor con el siguiente comando `java Consumidor`, para cada consumidor que vaya usar se recomienda agregar nuevamente al classpath las librerias indicadas en el paso 5 y finalmente ejecutamos el comando `java Productor`. 
-7. Cuando se abra otra terminal para ejecutar comando `java Consumidor` se debe repetir el paso 5 y 6. Donde se ubica la carpeta del proyecto agregar al classpath las librerias que estan en el paso 5.
+
+Nota: Cuando se abra otra terminal para ejecutar comando `java Consumidor` se debe repetir el paso 5 y 6. Donde se ubica la carpeta del proyecto agregar al classpath las librerias que estan en el paso 5.
 
 
 
